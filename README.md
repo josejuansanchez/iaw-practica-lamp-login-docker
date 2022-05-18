@@ -1,7 +1,7 @@
 # iaw-practica-lamp-login-docker
 
 >IES Celia Viñas (Almería) - Curso 2021/2022  
->Módulo: BD - Bases de Datos
+>Módulo: BD - Bases de Datos  
 >Ciclo: CFGS Desarrollo de Aplicaciones Web  
 
 Esta práctica consiste en un sistema **muy básico** que permite registrar usuarios, hacer login, añadir, editar, borrar y ver registros de una base de datos, haciendo uso de [PHP][1] y [MySQL][2].
