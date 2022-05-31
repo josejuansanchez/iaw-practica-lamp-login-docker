@@ -16,13 +16,13 @@
     </div>	
 
 	<?php
-	if(isset($_SESSION['valid'])) {			
+	if(isset($_SESSION['logged'])) {			
 		include("config.php");					
-		$result = mysqli_query($mysqli, "SELECT * FROM login");
+		$result = $mysqli->query("SELECT * FROM login");
 	?>				
 		Welcome <?php echo $_SESSION['name'] ?> !
 		<br/><br/>
-		<a href='view.php'>View and Add Products</a> | <a href='logout.php'>Logout</a><br/>
+		<a href='view.php'>View and Add Products</a> | <a href='view.php'>View and Add Fabricantes</a> | <a href='logout.php'>Logout</a><br/>
 		<br/><br/>
 	<?php	
 	} else {

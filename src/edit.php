@@ -1,12 +1,10 @@
-<?php session_start(); ?>
+<?php 
+session_start();
 
-<?php
-if(!isset($_SESSION['valid'])) {
+if(!isset($_SESSION['logged'])) {
 	header('Location: login.php');
 }
-?>
 
-<?php
 // including the database connection file
 include_once("config.php");
 
@@ -33,27 +31,27 @@ if(isset($_POST['id']) && isset($_POST['name']) && isset($_POST['qty']) && isset
 		}		
 	} else {	
 		//updating the table
-		$result = mysqli_query($mysqli, "UPDATE products SET name='$name', qty='$qty', price='$price' WHERE id=$id");
+		$result = $mysqli->query("UPDATE products SET name='$name', qty='$qty', price='$price' WHERE id=$id");		
 		
 		//redirectig to the display page. In our case, it is view.php
 		header("Location: view.php");
 	}
 }
-?>
-<?php
+
 //getting id from url
 $id = $_GET['id'];
 
 //selecting data associated with this particular id
-$result = mysqli_query($mysqli, "SELECT * FROM products WHERE id=$id");
+$result = $mysqli->query("SELECT * FROM products WHERE id=$id");
 
-while($res = mysqli_fetch_array($result))
+while($row = $result->fetch_array())
 {
-	$name = $res['name'];
-	$qty = $res['qty'];
-	$price = $res['price'];
+	$name = $row['name'];
+	$qty = $row['qty'];
+	$price = $row['price'];
 }
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>

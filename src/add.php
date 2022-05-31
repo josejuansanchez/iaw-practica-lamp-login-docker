@@ -1,7 +1,7 @@
 <?php session_start(); ?>
 
 <?php
-if(!isset($_SESSION['valid'])) {
+if(!isset($_SESSION['logged'])) {
 	header('Location: login.php');
 }
 ?>
@@ -53,7 +53,7 @@ if(isset($_POST['name']) && isset($_POST['qty']) && isset($_POST['price'])) {
 		// if all the fields are filled (not empty) 
 			
 		//insert data to database	
-		$result = mysqli_query($mysqli, "INSERT INTO products(name, qty, price, login_id) VALUES('$name','$qty','$price', '$loginId')");
+		$result = $mysqli->query("INSERT INTO products(name, qty, price, login_id) VALUES('$name','$qty','$price', '$loginId')");		
 		
 		//display success message
 		echo "<font color='green'>Data added successfully.";
