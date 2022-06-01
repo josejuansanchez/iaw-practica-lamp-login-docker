@@ -5,15 +5,15 @@ if(!isset($_SESSION['logged'])) {
 	header('Location: login.php');
 }
 
-//including the database connection file
+// Incluimos la conexión a la bd
 include("config.php");
 
-//getting id of the data from url
-$id = $_GET['id'];
+// Obtenemos el id del producto que queremos eliminar y lo saneamos
+$id = $mysqli->real_escape_string($_GET['id']);
 
-//deleting the row from table
+// Eliminamos el producto de la bd
 $result = $mysqli->query("DELETE FROM products WHERE id=$id");
 
-//redirecting to the display page (view.php in our case)
+// Redireccionamos a la página view.php
 header("Location:view.php");
 ?>

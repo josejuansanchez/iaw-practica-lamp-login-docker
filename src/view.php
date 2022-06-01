@@ -2,7 +2,7 @@
 // Iniciamos la sesión
 session_start();
 
-// Comprobamo si el usuario está logueado
+// Comprobamos si el usuario está logueado
 if(!isset($_SESSION['logged'])) {
 	header('Location: login.php');
 }
@@ -19,6 +19,5 @@ while($row = $result->fetch_array()) {
 	$products [] = $row;
 }
 
-// Incluimos la vista
 include_once("views/view.php");
 ?>
