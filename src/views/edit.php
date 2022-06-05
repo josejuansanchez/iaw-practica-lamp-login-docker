@@ -1,5 +1,11 @@
-<a href="index.php">Home</a> | <a href="view.php">View Products</a> | <a href="logout.php">Logout</a>
-<br/><br/>
+<ul class="nav nav-tabs">
+	<li class="nav-item"><a href="index.php" class="nav-link">Home</a></li>
+	<li class="nav-item "><a href="" class="nav-link active">Edit</a></li>
+	<li class="nav-item "><a href="view.php" class="nav-link">View</a></li>	
+	<li class="nav-item"><a href="add.php" class="nav-link">Add</a></li>
+	<li class="nav-item"><a href="logout.php" class="nav-link" >Logout</a></li>
+</ul>
+<br/>
 
 <form action="edit.php" method="post">
 
@@ -21,6 +27,6 @@
 	<input type="hidden" name="id" value=<?php echo $producto['id'];?>>
 	
 	<div class="mb-3">
-		<input type="submit" value="Update" class="form-control" >
+		<input type="submit" value="Update" class="form-control btn btn-primary">
 	</div>
 </form>
