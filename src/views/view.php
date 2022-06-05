@@ -6,8 +6,8 @@
 </ul>
 <br/>
 
-<table class="table table-striped table-bordered">
-	<thead>
+<table class="table table-striped table-bordered table-hover align-middle">
+	<thead class="table-dark">
 		<tr>
 			<th>Name</th>
 			<th>Quantity</th>

@@ -23,7 +23,7 @@
 	</div>
 
 	<div class="mb-3">
-		<input type="submit" value="Add" class="form-control" >
+		<input type="submit" value="Add" class="form-control btn btn-primary">
 	</div>
 </form>
 
