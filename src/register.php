@@ -17,7 +17,6 @@ if(!empty($_POST)) {
 	if(empty($name) || empty($email) || empty($username) || empty($password)) {
 		$status = "error";
 		$message = "All fields should be filled. Either one or many fields are empty.";
-		include_once("views/register.php");
 	} else {
 		// Si no están vacíos los insertamos en la bd
 		$mysqli->query("INSERT INTO login (name, email, username, password) VALUES ('$name', '$email', '$username', md5('$password'))");
