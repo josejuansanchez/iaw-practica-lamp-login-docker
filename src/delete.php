@@ -8,7 +8,7 @@ if(!isset($_SESSION['logged'])) {
 }
 
 // Incluimos el objeto de conexión con la bd
-include("config/config.php");
+include_once("config/config.php");
 
 // Saneamos id del producto que recibimos del formulario
 $id = $mysqli->real_escape_string($_GET['id']);

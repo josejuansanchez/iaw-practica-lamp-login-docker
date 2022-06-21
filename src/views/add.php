@@ -6,20 +6,30 @@
 </ul>
 <br/>
 
-<form action="add.php" method="post">
+<form action="add.php" method="post" enctype="multipart/form-data">
 	<div class="mb-3">
 		<label for="name">Name</label>
-		<input type="text" class="form-control" name="name">
+		<input type="text" class="form-control" name="name" required>
+	</div>
+
+	<div class="mb-3">
+		<label for="description">Description</label>
+		<textarea class="form-control" rows="3" name="description"></textarea>
 	</div>
 
 	<div class="mb-3">
 		<label for="qty">Quantity</label>
-		<input type="number" class="form-control" name="qty">
+		<input type="number" class="form-control" name="qty" required>
 	</div>
 
 	<div class="mb-3">
 		<label for="price">Price</label>
-		<input type="number" class="form-control" name="price">
+		<input type="number" class="form-control" name="price" required>
+	</div>
+
+	<div class="mb-3">
+  		<label for="image" class="form-label">Product Image</label>
+  		<input type="file" accept=".png, .jpg, .jpeg" class="form-control"  name="image">
 	</div>
 
 	<div class="mb-3">
