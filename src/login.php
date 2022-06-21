@@ -6,7 +6,7 @@ session_start();
 include_once("views/header.php");
 
 // Incluimos el objeto de conexión con la bd
-include("config/config.php");
+include_once("config/config.php");
 
 if(!empty($_POST)) {
 	// Saneamos los parámetros que recibimos del formulario

@@ -26,7 +26,7 @@ while($row = $result->fetch_array()) {
 $mysqli->close();
 
 // Incluimos la vista para ver un producto
-include('views/view.php');
+include_once('views/view.php');
 
 // Incluimos el pie de página
 include_once("views/footer.php");
