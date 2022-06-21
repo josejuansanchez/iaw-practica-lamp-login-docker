@@ -1,18 +1,28 @@
 # iaw-practica-lamp-login-docker
 
 >IES Celia Viñas (Almería) - Curso 2021/2022  
->Módulo: BD - Bases de Datos  
->Ciclo: CFGS Desarrollo de Aplicaciones Web  
+>Módulos: Bases de Datos (BD) / Implantación de Aplicaciones Web (IAW)  
+>Ciclos: CFGS DAW / CFGS ASIR  
 
-Práctica utilizada por el alumnado del módulo de Bases de Datos del Ciclo Formativo de Grado Superior Desarrollo de Aplicaciones Web del IES Celia Viñas de Almería.
+El contenido de este repositorio ha sido utilizado por el alumnado del [IES Celia Viñas (Almería)][12] en los módulos de:
 
-Esta práctica consiste en la creación de un sistema **muy básico** que permite registrar usuarios, hacer login, añadir, editar, borrar y ver registros de una base de datos, haciendo uso de [PHP][1] y [MySQL][2].
+- **Bases de Datos** del Ciclo Formativo de Grado Superior Desarrollo de Aplicaciones Web.
+- **Implantación de Aplicaciones Web** del Ciclo Formativo de Grado Superior Administración de Sistemas Informáticos en Red.
+
+Esta práctica consiste en la creación de un **sistema CRUD muy básico** que permite registrar usuarios, hacer login, añadir, editar, borrar y ver registros de una base de datos, haciendo uso de [PHP][1] y [MySQL][2].
+
+Vamos a trabajar con diferentes versiones de la misma aplicación para ir estudiando su evolución. Los repositorios de las aplicaciones que vamos a utilizar están disponibles en GitHub:
+
+- [Versión 1. Código Monolítico o Código _Espagueti_][9]
+- [Versión 2. Controlador y Vista][10]
+- [Versión 3. Modelo, Vista, Controlador (MVC)][11]
 
 ## Características
 
+- Esta versión implementa una primera mejora respecto a la solución de código monolítico, tratando de **organizar el código en controladores y vistas**. Todavía se trata de una versión incompleta, que se mejorará en la siguiente versión haciendo uso del patrón MVC.
 - El entorno de desarrollo LAMP se ha creado con [Docker][3] y [Docker Compose][4].
 - No se ha utilizado ningún framework de PHP, estamos utilizando _vanilla_ PHP.
-- Se ha utilizado la interfaz de programación orientada a objetos de la  [extensión MySQLi de PHP][5] para interactuar con la base de datos.
+- Se ha utilizado la interfaz de programación **orientada a objetos** de la  [extensión MySQLi de PHP][5] para interactuar con la base de datos.
 - El framework CSS que se ha utilizado es [Bootstrap][6].
 
 ## Créditos
@@ -27,3 +37,7 @@ El código utilizado en esta práctica está basado en el repositorio [crud-php-
 [6]: https://getbootstrap.com/docs/5.2/getting-started/introduction/
 [7]: https://github.com/chapagain/crud-php-complete
 [8]: https://github.com/chapagain
+[9]: https://github.com/josejuansanchez/iaw-practica-lamp-docker
+[10]: https://github.com/josejuansanchez/iaw-practica-lamp-login-docker/
+[11]: https://github.com/josejuansanchez/iaw-practica-lamp-mvc-docker
+[12]: https://iescelia.org/web/
