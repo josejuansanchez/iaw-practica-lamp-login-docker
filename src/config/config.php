@@ -1,8 +1,8 @@
 <?php
-define('DB_HOST', 'mysql');
-define('DB_NAME', 'lamp_db');
-define('DB_USER', 'lamp_user');
-define('DB_PASSWORD', 'lamp_password');
+define('DB_HOST', getenv('DB_HOST'));
+define('DB_NAME', getenv('DB_NAME'));
+define('DB_USER', getenv('DB_USER'));
+define('DB_PASSWORD', getenv('DB_PASSWORD'));
 
 $mysqli = new mysqli(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 ?>
